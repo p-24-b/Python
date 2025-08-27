@@ -1,0 +1,9 @@
+try:
+    file = open(r'C:\Users\p.a.bajpai\Python\Basics\FileHandling\sample.txt','r')
+    reading_file = file.readlines()
+    print('Reading file content:')
+    for i in reading_file:
+        print(i)
+    file.close()
+except FileNotFoundError:
+    print("Error: The file 'sample.txt' was not found")

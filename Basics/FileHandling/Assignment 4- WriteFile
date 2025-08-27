@@ -1,0 +1,20 @@
+try:
+    file = open(r'C:\Users\p.a.bajpai\Python\Basics\FileHandling\output.txt','w')
+    writeup = input("Enter text to write to the file:")
+    writing_file = file.write(writeup+'\n')
+    print("Data successfully written to output.txt")
+    file.close()
+
+    file = open(r'C:\Users\p.a.bajpai\Python\Basics\FileHandling\output.txt','a+')
+    writeup = input("Enter additional text to append:")
+    writing_file = file.write(writeup)
+    print("Data successfully appended")
+    file.close()
+
+    file = open(r'C:\Users\p.a.bajpai\Python\Basics\FileHandling\output.txt','r')
+    reading_file = file.readlines()
+    for i in reading_file:
+        print(i)
+    file.close()
+except FileNotFoundError:
+    print("Error: The file 'output.txt' was not found")
